@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Counter App</title>
+	</head>
+	<body onLoad="myTimer(1)">
+		<p>Counter:</p>
+		<p id="dispCtr"></p>
+	</body>
+</html>
+<script> 
+	var ctrList = [-1]
+	var ctr = ctrList[0];
+	var dStr = "";
+
+	function myTimer(curCt) {
+		var myVar = setInterval(myCtr,1000);
+		function myCtr(){
+			ctr++;
+			dStr = ctr.toString();
+			document.getElementById("dispCtr").innerHTML =dStr;
+		}
+	}
+</script>
